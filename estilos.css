@@ -1,0 +1,329 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+  background: darkslategray;
+  height: 120px;
+  width: 100%;
+  padding: 10px;    
+  overflow: hidden;
+  z-index: 1;
+}
+
+.navContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+}
+
+.navImageContainer{    
+  height: 120px;    
+  overflow: hidden;
+}
+
+.navImageContainer img{  
+  height: 120px;
+}
+
+
+label.logo a{
+  color: lightgray !important;
+  text-decoration: none;
+}
+
+.logo img{ 
+  height: 70px;    
+  margin-top: 10px;    
+  margin-bottom: 10px;
+}
+
+.imageLogoContainer{
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+}
+
+
+
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: lightgray;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+nav ul li a:hover{
+      color: red
+}
+/* a.active,a:hover{
+  background: darkslategray;
+  transition: .5s;
+} */
+.checkbtn{
+  font-size: 30px;
+  color: lightgray;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: darkslategray;
+    top: 120px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: red;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+.section-inner{
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  height: auto;
+}
+
+.sectionTitle{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.listContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  width: 350px; 
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  height: 560px;
+
+}
+
+.listContainer b{
+  left:0;
+}
+
+.imageContainer{
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+.texto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(images/bajo-combustibles-background.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;       
+  height: 90vh;    
+}
+
+.texto h2{
+  font-size: 45px;
+  margin: 5px 0;
+  color: black;
+}
+
+.footer{
+  width: 100%;
+  height: 240px;
+  background: darkslategray;
+  padding: 24px;
+  color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+   
+}
+.footer img{
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer div{
+  display: flex;
+  width: 520px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width: 550px){
+  label.logo{    
+
+  font-size: 25px;
+  line-height: 30px;
+  padding:16px;
+  }
+}
+
+
+/* -------------SERVICIOS------------ */
+
+.serviciosSection{  
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;    
+  background-color: #e9e8e8;
+  padding: 48px;
+  margin-bottom: 48px;    
+}
+
+.serviciosContainer{
+width: 100%;
+display: flex; /* HAY UN PROBLEMA CON ESTE FLEX */
+align-items: center;
+justify-content: space-around;
+gap: 24px;
+}
+
+/* -------------Productos------------ */
+
+.productContainer{
+display: flex;
+background-color: #e9e8e8;
+width: 100%;
+border-radius: 8px;
+padding: 8px;
+gap: 16px;
+
+}
+
+.productImage{
+background-color: red;
+width:40%; 
+height: 200px;
+}
+
+.productInfoContainer{
+width: 70%;
+}
+
+.productList{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 16px;
+margin-bottom: 24px;
+}
+
+@media(max-width: 550px){
+.productList{
+  grid-template-columns: 1fr;
+}
+}
+
+/* -------------Nosotros------------ */
+
+.sectionNosotros{
+height: auto;
+background-color: #e9e8e8;
+padding: 24px;
+margin-top: 48px;
+margin-bottom: 48px;
+width: 100%;
+}
+
+.nosotrosContainer{
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+gap: 24px;
+}
+
+.nosotrosInfo{
+display: flex;
+}
+
+
+/* -------------Contacto------------ */
+.contactoContainer{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 24px;
+}
+
+
+.fcf-form-class{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 400px;
+background-color: #e9e8e8;
+padding: 24px;
+border-radius: 8px;
+
+}
+
+.fcf-form-control{
+resize: none;
+width: 300px;
+}
